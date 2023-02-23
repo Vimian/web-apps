@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+        iframetimer:
+                build:
+                        context: .
+                        dockerfile: Dockerfile
+                ports:
+                        - "80:4000"
