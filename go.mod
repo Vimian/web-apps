@@ -1,4 +1,4 @@
-module github.com/mrdisguised/web-apps
+module github.com/casperfj/web-apps
 
 go 1.20
 

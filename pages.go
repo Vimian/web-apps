@@ -1,3 +1,36 @@
+package main
+
+// index is the index page
+const index string = `
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>iFrame Timer</title>
+	</head>
+	<body>
+		<script>
+			function goto(params) {
+				var prefix = "/";
+				if (window.location.pathname.endsWith("/")) {
+					prefix = "";
+				}
+				const url =
+					window.location.origin +
+					window.location.pathname +
+					prefix +
+					"timer?site=" +
+					document.getElementById("url").value;
+				window.location.replace(url);
+			}
+		</script>
+		<input type="text" id="url" placeholder="URL..." />
+		<button type="submit" onClick="goto()">Goto</button>
+	</body>
+</html>
+`
+
+// timer is the timer page
+const timer string = `
 <!DOCTYPE html>
 <html>
         <head>
@@ -191,3 +224,4 @@
                 ></script>
         </body>
 </html>
+`
